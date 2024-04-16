@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+html {
+	hanging-punctuation: first last;
+}
+
+body {
+	min-height: 100svh;
+	background-color: #1d2c3d;
+
+	font-family: Arial, sans-serif;
+	text-align: center;
+}
+
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+p {
+	max-width: 75ch;
+	text-wrap: pretty;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	:has(:target) {
+		scroll-behavior: smooth;
+		scroll-padding-top: 3rem;
+	}
+}
+
+.qr-code-container {
+	width: 350px;
+	padding: 20px 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: lightgrey;
+	border-radius: 10px;
+}
+
+.qr-code-heading {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 8px;
+	text-align: center;
+}
+
+#qr-input {
+	width: 100%;
+	height: 40px;
+	border: 1px solid #494eea;
+	outline: none;
+	padding: 10px;
+	margin-block: 20px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.btn-container {
+	margin-bottom: 20px;
+}
+
+button {
+	width: 100%;
+	padding: 14px 2px;
+	background-color: #494eea;
+	font-size: 18px;
+	color: white;
+	border: none;
+	outline: transparent;
+	border-radius: 5px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	margin: 10px 5px;
+	font-weight: 500;
+}
+
+#qr-code {
+	position: relative;
+}
+
+canvas {
+	border: 1px solid #333;
+}
