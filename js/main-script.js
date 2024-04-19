@@ -15,7 +15,11 @@ function generateQR() {
 }
 
 function determineQRType(input) {
-	if (input.startsWith("http://") || input.startsWith("https://")) {
+	const lowerCaseInput = input.toLowerCase(); // Convert input to lowercase
+	if (
+		lowerCaseInput.startsWith("http://") ||
+		lowerCaseInput.startsWith("https://")
+	) {
 		return "dynamic";
 	} else {
 		return "static";
